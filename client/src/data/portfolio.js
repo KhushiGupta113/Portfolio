@@ -46,6 +46,16 @@ export const portfolio = {
       period: 'Feb 2025 – Mar 2025',
       description:
         'A full‑stack web application with modular architecture focused on assessment workflows, speed, and a smoother user journey.',
+      role: 'Full‑stack developer (team project)',
+      challenges: [
+        'Reducing navigation friction across multi-step flows.',
+        'Handling authentication + validation reliably.',
+        'Keeping UI components reusable and consistent.',
+      ],
+      outcomes: [
+        'Reduced navigation time by ~35% with improved UI performance.',
+        'Reduced form-submission errors via input validation + sessions.',
+      ],
       bullets: [
         'Improved UI performance and reduced navigation time (approx. 35%).',
         'Added secure authentication, input validation, and session handling.',
@@ -63,6 +73,9 @@ export const portfolio = {
       period: 'Jun 2023 – Jul 2023',
       description:
         'A desktop address book app built with C++ and the Qt framework with contact CRUD and search.',
+      role: 'Developer',
+      challenges: ['Keeping data operations fast and predictable.', 'Designing a clean, intuitive desktop UI.'],
+      outcomes: ['Implemented reliable CRUD + search with an organized UI flow.'],
       bullets: [
         'Implemented add/edit/delete and contact search features.',
         'Used structured modules for smooth data handling and quick retrieval.',
@@ -73,6 +86,24 @@ export const portfolio = {
       links: [{ label: 'GitHub', href: '' }],
     },
   ],
+  experience: [
+    // Add internships/work experience here when available:
+    // { company: 'Company', role: 'Role', period: 'Month YYYY – Month YYYY', highlights: ['Impact 1', 'Impact 2'] }
+  ],
+  achievements: [
+    { title: 'Elite Certification (NPTEL)', period: '2025', detail: 'Secured Elite certification in a technology-enhanced learning course.' },
+    { title: '3-star rating on HackerRank', period: '2024', detail: 'Achieved a 3-star rating in Java, Python, and C++.' },
+  ],
+  competitive: {
+    platforms: [
+      { name: 'HackerRank', detail: '3-star (Java / Python / C++)', link: '' },
+      { name: 'LeetCode', detail: 'Add your profile / stats', link: '' },
+      { name: 'Kaggle', detail: 'Add competitions / notebooks', link: '' },
+    ],
+    hackathons: [
+      { name: 'Hackathon Project: CodeLens', period: '2025', detail: 'Assessment platform focused on UX + performance.' },
+    ],
+  },
   education: [
     {
       title: 'Lovely Professional University — B.Tech CSE',
@@ -93,6 +124,7 @@ export const portfolio = {
   training: {
     title: 'Summer Training — Mastering C++',
     meta: 'Focused on OOP, STL, memory management, recursion, and dynamic programming.',
+    period: 'Jun 2025 – Jul 2025',
     bullets: [
       'Built algorithmic solutions aligned with industry practices.',
       'Worked on clean, modular designs and optimized approaches.',
@@ -101,13 +133,13 @@ export const portfolio = {
     ],
   },
   certificates: [
-    'Master Generative AI & tools (Udemy)',
-    'Language Principle & Finite Automata Theory (Infosys)',
-    'CRUD Operations (MongoDB)',
-    'Cloud Computing (NPTEL)',
-    'Java Programming (LPU)',
-    'Computer Programming (LPU)',
-    'Responsive Web Design (freeCodeCamp)',
+    { title: 'Master Generative AI & tools', issuer: 'Udemy', date: 'Aug 2025', link: '' },
+    { title: 'Language Principle & Finite Automata Theory', issuer: 'Infosys', date: 'Aug 2025', link: '' },
+    { title: 'CRUD Operations', issuer: 'MongoDB', date: 'Jul 2025', link: '' },
+    { title: 'Cloud Computing', issuer: 'NPTEL', date: 'Apr 2025', link: '' },
+    { title: 'Java Programming', issuer: 'LPU', date: 'May 2025', link: '' },
+    { title: 'Computer Programming', issuer: 'LPU', date: 'May 2024', link: '' },
+    { title: 'Responsive Web Design', issuer: 'freeCodeCamp', date: 'Nov 2023', link: '' },
   ],
 }
 
