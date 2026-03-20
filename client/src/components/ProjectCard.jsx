@@ -40,11 +40,6 @@ export function ProjectCard({ project }) {
             {project.title}
           </h3>
           <p className="mt-1 text-sm text-zinc-400 font-medium">{project.period}</p>
-          {project.role ? (
-            <p className="mt-2 text-sm text-zinc-300">
-              <span className="text-zinc-500">Role:</span> <span className="text-zinc-200 font-medium">{project.role}</span>
-            </p>
-          ) : null}
         </div>
         <div className="flex flex-wrap gap-2">
           {(project.links ?? []).map((l) => (

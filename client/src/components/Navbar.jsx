@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { GithubIcon, LinkedinIcon, MenuIcon, XIcon } from './Icons' // We'll create these
+import { GithubIcon, LinkedinIcon, MenuIcon, XIcon } from './Icons'
 
 function IconLink({ href, label, children }) {
   return (
@@ -19,7 +19,7 @@ function IconLink({ href, label, children }) {
   )
 }
 
-export function Navbar({ name, links, active, onActiveChange, socials }) {
+export function Navbar({ links, active, onActiveChange, socials }) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -57,26 +57,14 @@ export function Navbar({ name, links, active, onActiveChange, socials }) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-zinc-950/70 backdrop-blur-2xl border-b border-white/10 shadow-xl shadow-black/50 py-1' : 'bg-transparent py-4'}`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 py-4 ${scrolled ? 'bg-zinc-950/70 backdrop-blur-2xl shadow-xl shadow-black/50' : 'bg-transparent'}`}
     >
       <div className="container-padded">
-        <div className="flex h-14 items-center justify-between gap-3">
-          <button
-            onClick={() => go('home')}
-            className="group flex items-center gap-3 rounded-xl px-2 py-1 text-left"
-          >
-            <div className="relative flex size-10 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-600 shadow-lg group-hover:shadow-violet-500/50 transition-shadow">
-              <span className="text-lg font-bold text-white relative z-10">
-                {name?.[0] ?? 'K'}
-              </span>
-              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <span className="hidden text-base font-bold tracking-tight text-white sm:block">
-              {name}
-            </span>
-          </button>
+        <div className="flex h-14 items-center justify-center md:justify-between gap-3">
+          {/* Invisible spacer for desktop to keep center alignment balance */}
+          <div className="hidden md:block w-[80px]" />
 
-          <nav className="hidden items-center gap-1 md:flex rounded-full bg-white/5 border border-white/10 px-2 py-1.5 backdrop-blur-md">
+          <nav className="flex items-center gap-1 rounded-full bg-white/5 border border-white/10 px-2 py-1.5 backdrop-blur-md">
             {links.map((l) => (
               <button
                 key={l.id}
@@ -156,4 +144,3 @@ export function Navbar({ name, links, active, onActiveChange, socials }) {
     </motion.div>
   )
 }
-

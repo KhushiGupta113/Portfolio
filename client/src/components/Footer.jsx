@@ -23,16 +23,8 @@ export function Footer({ name, socials }) {
             ))}
           </div>
         </div>
-        <div className="mt-16 sm:mt-24 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-white/5 pt-8">
-          <p className="text-sm text-zinc-500">
-            © {new Date().getFullYear()} {name}. All rights reserved.
-          </p>
-          <p className="text-sm text-zinc-500 flex items-center gap-1.5">
-            Designed to wow <span className="inline-block animate-pulse text-zinc-400">⚡</span>
-          </p>
-        </div>
+        <div className="mt-16 sm:mt-24 border-t border-white/5 pt-8" />
       </div>
     </footer>
   )
 }
-

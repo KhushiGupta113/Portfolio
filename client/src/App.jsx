@@ -192,7 +192,8 @@ export default function App() {
           title="Education"
           subtitle="Academic journey & training"
         >
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-6">
+            {/* Unified Education Card */}
             <motion.div
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
@@ -204,7 +205,8 @@ export default function App() {
                 </div>
                 <h3 className="text-xl font-bold text-white">Education</h3>
               </div>
-              <div className="grid gap-5">
+              
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {portfolio.education.map((e) => (
                   <div
                     key={e.title}
@@ -221,7 +223,8 @@ export default function App() {
                 ))}
               </div>
             </motion.div>
-            
+
+            {/* Training & Certificates Card */}
             <motion.div
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
@@ -233,7 +236,7 @@ export default function App() {
                 </div>
                 <h3 className="text-xl font-bold text-white">Training & Certificates</h3>
               </div>
-              <div className="grid gap-5">
+              <div className="grid gap-6 lg:grid-cols-2">
                 <div className="rounded-xl border border-white/5 bg-black/20 p-5 shadow-inner">
                   <p className="text-base font-bold text-white">
                     {portfolio.training.title}
