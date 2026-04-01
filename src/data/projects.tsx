@@ -253,7 +253,7 @@ const projects: Project[] = [
     id: "codelens",
     category: "Platform",
     title: "CodeLens : Hackathon Assessment Platform",
-    src: "/assets/projects-screenshots/codelens.png",
+    src: "/assets/projects-screenshots/CodeLens.png",
     screenshots: [],
     live: "https://codelens.42web.io/Frontend/",
     github: "https://github.com/KhushiGupta113/INT219-INT220-Project",
@@ -288,7 +288,7 @@ const projects: Project[] = [
     id: "exam-paper-generator",
     category: "Web Application",
     title: "Exam Paper Generator",
-    src: "/assets/projects-screenshots/exam-paper-generator.png",
+    src: "/assets/projects-screenshots/ExamGen.png",
     screenshots: [],
     skills: {
       frontend: [
