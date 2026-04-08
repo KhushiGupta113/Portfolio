@@ -7,27 +7,90 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ExperienceSection = () => {
+  const certifications = EXPERIENCE.filter(exp => exp.title === "Certifications");
+  const achievements = EXPERIENCE.filter(exp => exp.title === "Achievements");
+  const training = EXPERIENCE.filter(exp => exp.title.toLowerCase().includes("training"));
+  const education = EXPERIENCE.filter(exp => 
+    exp.title.toLowerCase().includes("bachelor") || 
+    exp.title.toLowerCase().includes("intermediate") || 
+    exp.title.toLowerCase().includes("matriculation")
+  );
+
   return (
     <SectionWrapper
-      className="flex flex-col items-center justify-center min-h-[120vh] py-20 z-10"
+      id="experience"
+      className="flex flex-col items-center justify-center min-h-screen py-20 z-10"
     >
-      <div className="w-full max-w-4xl px-4 md:px-8 mx-auto">
-        <SectionHeader
-          id="experience"
-          title="Education & Training"
-          desc="My academic and professional journey."
-          className="mb-12 md:mb-20 mt-0"
-        />
+      <div className="w-full max-w-4xl px-4 md:px-8 mx-auto space-y-24">
+        {/* Education Group */}
+        <div className="space-y-12">
+          <SectionHeader
+            id="education"
+            title="Education"
+            desc="My academic foundation."
+            className="mb-12 md:mb-16 mt-0"
+          />
+          <div className="flex flex-col gap-8 md:gap-12 relative">
+            <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-border hidden md:block -translate-x-1/2" />
+            {education.map((exp, index) => (
+              <div key={exp.id} className="relative">
+                <ExperienceCard experience={exp} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
 
-        <div className="flex flex-col gap-8 md:gap-12 relative">
-          {/* Connector Line - simplified to a subtle border */}
-          <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-border hidden md:block -translate-x-1/2" />
+        {/* Training Group */}
+        <div className="space-y-12">
+          <SectionHeader
+            id="training"
+            title="Training"
+            className="mb-12 md:mb-16 mt-0"
+          />
+          <div className="flex flex-col gap-8 md:gap-12 relative">
+            <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-border hidden md:block -translate-x-1/2" />
+            {training.map((exp, index) => (
+              <div key={exp.id} className="relative">
+                <ExperienceCard experience={exp} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
 
-          {EXPERIENCE.map((exp, index) => (
-            <div key={exp.id} className="relative">
-              <ExperienceCard experience={exp} index={index} />
-            </div>
-          ))}
+        {/* Certifications Group */}
+        <div className="space-y-12">
+          <SectionHeader
+            id="certifications"
+            title="Certifications"
+            desc="Validated skills and knowledge."
+            className="mb-12 md:mb-16 mt-0"
+          />
+          <div className="flex flex-col gap-8 md:gap-12 relative">
+            <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-border hidden md:block -translate-x-1/2" />
+            {certifications.map((exp, index) => (
+              <div key={exp.id} className="relative">
+                <ExperienceCard experience={exp} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Achievements Group */}
+        <div className="space-y-12">
+          <SectionHeader
+            id="achievements"
+            title="Achievements"
+            desc="Milestones and competitive success."
+            className="mb-12 md:mb-16 mt-0"
+          />
+          <div className="flex flex-col gap-8 md:gap-12 relative">
+            <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-border hidden md:block -translate-x-1/2" />
+            {achievements.map((exp, index) => (
+              <div key={exp.id} className="relative">
+                <ExperienceCard experience={exp} index={index} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </SectionWrapper>
